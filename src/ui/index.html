@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatty Pi</title>
+    <meta name="description" content="Chatty Pi messaging platform UI" />
+    <link rel="stylesheet" href="/ui/styles.css" />
+  </head>
+  <body>
+    <div id="app" class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-row">
+          <div class="brand-mark">π</div>
+          <div>
+            <div class="brand-name">Chatty Pi</div>
+            <div class="brand-version">V1</div>
+          </div>
+        </div>
+        <button class="new-chat" type="button">＋ New chat</button>
+        <nav class="nav-list" aria-label="Primary">
+          <button class="nav-item active" type="button">💬 Chats</button>
+          <button class="nav-item" type="button">👥 Communities</button>
+          <button class="nav-item" type="button">🔔 Notifications</button>
+          <button class="nav-item" type="button">👤 Profile</button>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="status-dot"></div>
+          <span>Connected</span>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <div class="eyebrow">Messages</div>
+            <h1>Chats</h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-button" type="button" aria-label="Search">⌕</button>
+            <button class="avatar" type="button">Y</button>
+          </div>
+        </header>
+
+        <section class="content-grid">
+          <div class="chat-list card">
+            <div class="search-box">Search chats…</div>
+            <div id="chat-list-items" class="chat-items">
+              <button class="chat-item selected" type="button">
+                <div class="chat-avatar">Y</div>
+                <div class="chat-copy">
+                  <div class="chat-title">Chatty Pi Team</div>
+                  <div class="chat-preview">Welcome to Chatty Pi.</div>
+                </div>
+                <time>Now</time>
+              </button>
+              <button class="chat-item" type="button">
+                <div class="chat-avatar secondary">C</div>
+                <div class="chat-copy">
+                  <div class="chat-title">Community Games</div>
+                  <div class="chat-preview">New game night tonight.</div>
+                </div>
+                <time>5m</time>
+              </button>
+            </div>
+          </div>
+
+          <section class="conversation card">
+            <div class="conversation-header">
+              <div class="chat-avatar">Y</div>
+              <div>
+                <div class="chat-title">Chatty Pi Team</div>
+                <div class="presence">Online</div>
+              </div>
+              <div class="conversation-actions">
+                <button class="icon-button" type="button">⌕</button>
+                <button class="icon-button" type="button">⋯</button>
+              </div>
+            </div>
+
+            <div id="messages" class="messages">
+              <div class="message incoming">Welcome to Chatty Pi.</div>
+              <div class="message incoming">Your UI is ready for the API.</div>
+              <div class="message outgoing">Let's build it 🚀</div>
+            </div>
+
+            <form id="message-form" class="composer">
+              <button class="icon-button" type="button" aria-label="Attach">＋</button>
+              <input id="message-input" type="text" autocomplete="off" placeholder="Type a message…" />
+              <button class="send-button" type="submit">Send</button>
+            </form>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script src="/ui/app.js" type="module"></script>
+  </body>
+</html>
